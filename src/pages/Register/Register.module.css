@@ -1,0 +1,22 @@
+.register {
+  text-align: center;
+}
+.register p {
+  color: var(--text-color);
+}
+
+.register b {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrap_form {
+  display: inline-block;
+  width: 40%;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  filter: var(--shadow);
+}
+.wrap_form form {
+  padding: 20px;
+}
