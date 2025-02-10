@@ -27,20 +27,48 @@
 }
 .active {
   background-color: var(--secondary-color);
-  color: var(--text-color);
+  color: #000;
+  filter: var(--shadow);
+  border-radius: 5px;
 }
-@media (max-width: 530px) {
-  .navbar {
-    padding: 0;
-    justify-content: space-around;
+.menuButton {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
   }
+
   .links_list {
-    padding: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: var(--gradient);
+    z-index: 999;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
   }
+  .active {
+    background: none;
+    filter: none;
+  }
+  .open {
+    display: block;
+    width: 100px;
+    margin-right: 5px;
+  }
+
   .links_list li {
-    margin: 0;
-  }
-  .links_list li a {
-    padding: 5px;
+    padding: 10px 0;
   }
 }
