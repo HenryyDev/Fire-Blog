@@ -25,6 +25,9 @@
 .links_list li a {
   padding: 0.4em 0.6em;
 }
+.links_list li a:hover {
+  color: var(--text-color);
+}
 .active {
   background-color: var(--secondary-color);
   color: #000;
@@ -70,5 +73,9 @@
 
   .links_list li {
     padding: 10px 0;
+    margin: 0;
+  }
+  .links_list li a {
+    padding: 0;
   }
 }
