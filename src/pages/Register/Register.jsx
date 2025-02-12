@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Register.module.css";
+import { useAuthentication } from "../../hooks/UseAuthentication";
 const Register = () => {
   const [displayName, setdisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const [viewPassword, setViewPassoword] = useState(false);
 
-  const handleSubmit = (e) => {
+  const { createUser, error: authError, loading } = useAuthentication();
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setError("");
@@ -22,8 +25,14 @@ const Register = () => {
       setError("As senhas precisam ser iguais!");
       return;
     }
-    console.log(user);
+    const res = await createUser(user);
+    console.log(res);
   };
+  useEffect(() => {
+    if (authError) {
+      setError(authError);
+    }
+  }, [authError]);
   return (
     <div className={styles.register}>
       <h1>
@@ -56,14 +65,23 @@ const Register = () => {
           </label>
           <label>
             <span>Senha:</span>
-            <input
-              type="password"
-              name="password"
-              required
-              placeholder="Digite sua senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className={styles.password}>
+              <input
+                type={viewPassword ? "text" : "password"}
+                name="password"
+                required
+                placeholder="Digite sua senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <img
+                className={styles.view_password}
+                src={viewPassword ? "/noView.svg" : "/view.svg"}
+                alt=""
+                onClick={() => setViewPassoword((prev) => !prev)}
+                height={30}
+              />
+            </div>
           </label>
           <label>
             <span>Senha:</span>
@@ -76,7 +94,12 @@ const Register = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </label>
-          <button className="btn">Cadastrar</button>
+          {!loading && <button className="btn">Cadastrar</button>}
+          {loading && (
+            <button className="btn" disabled>
+              Aguarde...
+            </button>
+          )}
           {error && <p className="error">{error}</p>}
         </form>
       </div>

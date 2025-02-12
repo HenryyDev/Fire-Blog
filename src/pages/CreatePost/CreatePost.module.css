@@ -1,0 +1,29 @@
+.create_post {
+  text-align: center;
+}
+
+.create_post h2 {
+  font-size: 2.2em;
+}
+.create_post p {
+  color: var(--text-color);
+  margin-bottom: 2em;
+}
+.wrap_form__post {
+  display: inline-block;
+  width: 40%;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  filter: var(--shadow);
+}
+.wrap_form__post form {
+  padding: 20px;
+}
+.wrap_form__post input {
+  padding-left: 5px;
+}
+@media (max-width: 769px) {
+  .wrap_form__post {
+    width: 80%;
+  }
+}
