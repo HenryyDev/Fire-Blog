@@ -23,6 +23,26 @@
 .wrap_form input {
   padding-left: 5px;
 }
+.wrap_form button {
+  transition: transform 0.5s ease-in-out;
+}
+.wrap_form button:hover {
+  transform: scale(1.1);
+}
+.password {
+  display: flex;
+}
+.password input {
+  width: 100%;
+}
+.view_password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+.view_password {
+  margin-right: 10px;
+}
 @media (max-width: 769px) {
   .wrap_form {
     width: 70%;

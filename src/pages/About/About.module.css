@@ -1,0 +1,18 @@
+.about {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.about span {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about p {
+  margin-bottom: 2em;
+}
+.about a {
+  margin-top: 15px;
+  padding: 10px 15px;
+}
