@@ -28,6 +28,9 @@ html {
 
   height: 100%;
 }
+textarea {
+  resize: none;
+}
 input::placeholder,
 textarea::placeholder {
   font-family: var(--font-text);
@@ -87,21 +90,28 @@ textarea {
   font-size: 1em;
 }
 .btn.btn-dark {
-  background-color: #000;
+  background: var(--secondary-color);
   border-radius: 0;
 }
+
 .btn.btn-outline {
+  height: auto;
   background-color: transparent;
   border-radius: 0;
   color: #000;
-  border-radius: 1px solid #000;
+  border: 1px solid #000;
   padding: 7px 30px;
+  filter: none;
 }
 .btn:hover {
+  color: #fff;
   background-color: var(--highlight-color);
 }
 .btn.btn-outline:hover {
   background-color: #000;
+}
+.btn.btn.btn-danger {
+  width: auto;
 }
 .btn.btn-danger:hover {
   background-color: #dc3545;

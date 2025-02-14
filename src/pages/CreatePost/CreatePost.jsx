@@ -25,7 +25,9 @@ const CreatePost = () => {
     }
 
     //criar array de tags
-    const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
+    const tagsArray = tags
+      .split(",")
+      .map((tag) => tag.trim().toLowerCase().slice(1));
     if (!title || !image || !tags || !body) {
       setFormError("Por favor, preencha todos os campos!");
     }
@@ -36,7 +38,7 @@ const CreatePost = () => {
       title,
       image,
       body,
-      tags,
+      tags: tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
     });
@@ -85,12 +87,12 @@ const CreatePost = () => {
             ></textarea>
           </label>
           <label>
-            <span>Tags:</span>
+            <span>Hashtags:</span>
             <input
               type="text"
               name="image"
               required
-              placeholder="Insira as tags separadas por vírgula"
+              placeholder="Insira as # separadas por vírgula"
               onChange={(e) => setTags(e.target.value)}
               value={tags}
             />

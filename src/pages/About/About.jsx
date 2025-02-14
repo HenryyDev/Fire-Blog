@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className={styles.about}>
       <h2>
-        Sobre o Fire<span>Blog</span>
+        Sobre o Fire <span>Blog</span>
         <p>
           Este projeto consiste em um blog feito em react no front-end e
           firebase no backend.
