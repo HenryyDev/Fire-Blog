@@ -5,6 +5,7 @@
 }
 .post__detail img {
   max-width: 600px;
+  width: 600px;
   height: auto;
 }
 .post__detail h2 {
