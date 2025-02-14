@@ -35,15 +35,14 @@
 }
 .password input {
   width: 100%;
+  padding-right: 40px;
 }
 .view_password {
   position: absolute;
   right: 10px;
+  top: 55%;
+  transform: translateY(-50%);
   cursor: pointer;
-}
-.view_password {
-  margin-top: 7px;
-  margin-right: 10px;
 }
 .link__cadastro {
   display: block;
