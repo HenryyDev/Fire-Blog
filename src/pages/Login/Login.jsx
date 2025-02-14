@@ -1,6 +1,6 @@
 import styles from "./Login.module.css";
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import { useAuthentication } from "../../hooks/UseAuthentication";
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -66,6 +66,9 @@ const Login = () => {
               />
             </div>
           </label>
+          <Link to={"/register"} className={styles.link__cadastro}>
+            Não tem uma conta? <span>Cadastre-se</span>
+          </Link>
 
           {!loading && <button className="btn">Entrar</button>}
           {loading && (

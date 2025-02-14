@@ -54,17 +54,14 @@
     position: absolute;
     top: 40px;
     right: 0;
-    background: var(--gradient);
+    background: #cacaca;
     z-index: 999;
     border-radius: 5px;
     width: 100%;
     text-align: center;
     padding: 10px;
   }
-  .active {
-    background: none;
-    filter: none;
-  }
+
   .open {
     display: block;
     width: 100px;
@@ -74,8 +71,5 @@
   .links_list li {
     padding: 10px 0;
     margin: 0;
-  }
-  .links_list li a {
-    padding: 0;
   }
 }
