@@ -27,7 +27,11 @@ const Home = () => {
           <input
             type="text"
             placeholder="Ou busque por uma #..."
-            onChange={(e) => setQuery(e.target.value.slice(1))}
+            onChange={(e) => {
+              let tag = e.target.value;
+              tag = tag.startsWith("#") ? tag.slice(1) : tag;
+              setQuery(tag);
+            }}
           />
           <button className="btn btn-dark">Pesquisar</button>
         </form>

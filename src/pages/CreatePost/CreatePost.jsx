@@ -25,9 +25,10 @@ const CreatePost = () => {
     }
 
     //criar array de tags
-    const tagsArray = tags
-      .split(",")
-      .map((tag) => tag.trim().toLowerCase().slice(1));
+    const tagsArray = tags.split(",").map((tag) => {
+      tag.trim().toLowerCase();
+      return tag.startsWith("#") ? tag.slice(1) : tag;
+    });
     if (!title || !image || !tags || !body) {
       setFormError("Por favor, preencha todos os campos!");
     }
