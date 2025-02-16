@@ -90,7 +90,7 @@ textarea {
   font-size: 1em;
 }
 .btn.btn-dark {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border-radius: 0;
 }
 

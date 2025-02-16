@@ -2,6 +2,9 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  white-space: nowwrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .post__container h3 {
   margin-bottom: 0.2em;
@@ -14,6 +17,9 @@
   display: flex;
   flex-direction: column;
   max-width: 600px;
+}
+.post__wrap h1 {
+  text-align: left;
 }
 .tags p {
   margin-top: 0;

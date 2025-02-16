@@ -26,9 +26,13 @@
 .post__row {
   display: flex;
   justify-content: space-between;
-
   width: 80%;
   padding: 10px;
+}
+.post__row p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .post__header {
   font-weight: bold;

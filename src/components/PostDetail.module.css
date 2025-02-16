@@ -2,6 +2,13 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 4em;
+  max-width: 600px;
+}
+.post__detail h2,
+.post__detail p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .post__detail img {
   max-width: 600px;
@@ -27,10 +34,10 @@
   margin-bottom: 1em;
 }
 @media (max-width: 769px) {
+  .post__detail {
+    width: 90%;
+  }
   .post__detail img {
     width: 100%;
-  }
-  .post__detail {
-    margin: 3em 1em;
   }
 }

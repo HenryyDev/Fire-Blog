@@ -34,14 +34,15 @@
 }
 .password input {
   width: 100%;
+  padding-right: 40px;
 }
 .view_password {
   position: absolute;
   right: 10px;
+  top: 57%;
+  margin-right: 0.4em;
+  transform: translateY(-50%);
   cursor: pointer;
-}
-.view_password {
-  margin-right: 10px;
 }
 @media (max-width: 769px) {
   .wrap_form {
