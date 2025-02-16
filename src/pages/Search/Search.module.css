@@ -5,6 +5,7 @@
   justify-content: center;
 }
 .search__container h1 {
+  text-align: center;
   margin-bottom: 2em;
   width: 90%;
 }
@@ -20,6 +21,7 @@
 .posts {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media (max-width: 576px) {
   .search__container h1 {
