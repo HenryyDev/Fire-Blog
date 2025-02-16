@@ -4,6 +4,7 @@ Mini blog que permite aos usuários criar, editar e excluir posts de forma prát
 ## 🔗 Aplicação Online
 Acesse a versão em produção da aplicação:
 [fire-blog.com](https://fire-blog-beta.vercel.app/)
+![image](https://github.com/user-attachments/assets/a63f0522-3b56-4da1-b6fb-63dab3d7e6f0)
 
 ## 🚀 Começando
 Estas instruções permitirão que você obtenha uma cópia do projeto para rodar localmente para desenvolvimento ou testar novas funcionalidades. Caso prefira, você pode acessar a versão já implantada através do link acima.
