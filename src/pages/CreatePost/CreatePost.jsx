@@ -12,7 +12,6 @@ const CreatePost = () => {
   const navigate = useNavigate();
   const { user } = useAuthValue();
   const { insertDocument, response } = useInsertDocument("posts");
-  console.log(response);
 
   const handleSubmit = (e) => {
     e.preventDefault();

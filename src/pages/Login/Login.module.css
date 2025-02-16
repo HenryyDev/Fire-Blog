@@ -40,7 +40,8 @@
 .view_password {
   position: absolute;
   right: 10px;
-  top: 55%;
+  top: 54%;
+  margin-right: 0.5em;
   transform: translateY(-50%);
   cursor: pointer;
 }

@@ -29,7 +29,6 @@ export const useInsertDocument = (doccollection) => {
     }
   };
   const insertDocument = async (document) => {
-    console.log("Inserção iniciada...");
     checkCancelBeforeDispatch({ type: "LOADING" });
     try {
       const newDocument = { ...document, createdAt: Timestamp.now() };
@@ -37,13 +36,11 @@ export const useInsertDocument = (doccollection) => {
         collection(db, doccollection),
         newDocument
       );
-      console.log("Documento inserido:", insertedDocument);
       checkCancelBeforeDispatch({
         type: "INSERTED_DOC",
         payload: insertedDocument,
       });
     } catch (error) {
-      console.log("Erro ao inserir:", error.message);
       checkCancelBeforeDispatch({
         type: "ERROR",
         payload: error.message,

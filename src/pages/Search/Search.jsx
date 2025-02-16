@@ -11,7 +11,7 @@ const Search = () => {
   return (
     <div className={styles.search__container}>
       <h1>Resultados da sua busca</h1>
-      <div>
+      <div className={styles.posts}>
         {posts && posts.length === 0 && (
           <>
             <div className={styles.nopost}>

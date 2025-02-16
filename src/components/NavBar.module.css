@@ -67,6 +67,10 @@
     width: 100px;
     margin-right: 5px;
   }
+  .active {
+    background: none;
+    filter: none;
+  }
 
   .links_list li {
     padding: 10px 0;
